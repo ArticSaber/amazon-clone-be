@@ -2,34 +2,40 @@ import mongoose from "mongoose";
 
 const productSchema = new mongoose.Schema(
   {
-    productID: {
-      type: String,
-      required: true,
+    ProductID: {
+      type: Number,
+      // required: true,
       unique: true,
       index: true,
     },
-    productName: {
+    title: {
       type: String,
-      required: true,
-    },
-    productCategory: {
-      type: String,
-      enum: ["Electronics", "Food & Beverages", "Toys", "Books"],
-      required: true,
-    },
-    productCost: {
-      type: Number,
-      required: true,
-    },
-    productStockQuantity: {
-      type: Number,
-      required: true,
-    },
-    productImagePath: {
-      type: String,
-      required: true,
+      // required: true,
       unique: true,
       index: true,
+    },
+    price: {
+      type: Number,
+      // required: true,
+    },
+    category: {
+      type: String,
+      // enum: ["Electronics", "Food & Beverages", "Toys", "Books"],
+      // required: true,
+    },
+    stock: {
+      type: Number,
+      // required: true,
+    },
+    image: {
+      type: String,
+      // required: true,
+      unique: true,
+      index: true,
+    },
+    rating: {
+      type: Number,
+      // required: true,
     },
   },
   {

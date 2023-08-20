@@ -38,12 +38,12 @@ router.post("/login", async (req, res) => {
     const token = jwt.sign({ userId: user._id }, "secretKey", {
       expiresIn: "1h",
     });
-    res.cookie(
-      "token",
-      token,
-      { httpOnly: true },
-      { maxAge: 1000 * 60 * 60 * 24 }
-    );
+    res.cookie("token", token, {
+      httpOnly: true,
+      maxAge: 1000 * 60 * 60 * 24,
+      domain: "localhost",
+      path: "/",
+    });
     console.log(token, isPasswordValid);
     res.status(200).json({ userId: user._id, userName: user.email });
   } catch (error) {
