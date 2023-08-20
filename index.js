@@ -37,3 +37,5 @@ app.listen(
     `Server started running at http://localhost:${PORT}/api/v1/shoppingcart/`
   )
 );
+
+export default app;
