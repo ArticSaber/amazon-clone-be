@@ -5,8 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon index.js",
-    "vercel-build": "echo hello"
+    "dev": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
